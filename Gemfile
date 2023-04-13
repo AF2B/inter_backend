@@ -5,6 +5,7 @@ ruby '3.1.2'
 
 gem 'bootsnap', require: false
 gem 'dotenv-rails'
+gem 'faker'
 gem 'jwt'
 gem 'mysql2'
 gem 'puma', '~> 5.0'
