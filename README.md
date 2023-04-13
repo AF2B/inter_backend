@@ -16,6 +16,8 @@ O projeto foi desenvolvido para todas as disciplinas do 5º período do curso de
 
 ## Uso
 - Para o "consumo" do serviço, você pode acessar a documentação da API em http://localhost:3000/api-docs.
+![Swagger Image](./assets/swaggerimg.jpeg)
+![Swagger Image](./assets/swaggerimg2.jpeg)
 
 - Para executar os testes do projeto, execute o seguinte comando na raiz do projeto: docker-compose run web bundle exec rspec
 
