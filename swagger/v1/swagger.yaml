@@ -1,0 +1,54 @@
+openapi: 3.0.1
+info:
+  title: API V1
+  description: inter_backend
+  version: v1
+paths:
+  "/api/v1/auth":
+    post:
+      tags:
+        - auth
+      summary: Get information of user
+      description: That route is used to get information about an user
+      parameters:
+        - name: Authorization
+          in: header
+          description: Token containing email and password of the user
+          required: true
+          example: "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IlRvcnkgQ3JlbWluIEpyLiIsImVtYWlsIjoiYmVsdmFAa2VydHptYW5uLXRvcnAuaW5mbyIsInBob25lIjoiMS04NzYtODM4LTQwMjIgeDk2NDc2IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTMgMTI6MDA6MDIgVVRDIiwidXBkYXRlZF9hdCI6IjIwMjMtMDQtMTMgMTI6MDA6MDIgVVRDIiwicGFzc3dvcmQiOiJ5a1FHZ1JhQ3ZHIn0.dhCtrFj05s2TVqsOjRNaJWVNiUT_cfoQyqugSnbgaZ8"
+        - name: Content-Type
+          in: header
+          description: Type of the content sent in the request
+          required: true
+          example: "application/json"
+        - name: Accept
+          in: header
+          description: Type of the content accepted in the response
+          required: true
+          example: "application/json"
+        - name: AppKey
+          in: header
+          description: Numeric key to identify the application
+          required: true
+          example: "12345"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IlRvcnkgQ3JlbWluIEpyLiIsImVtYWlsIjoiYmVsdmFAa2VydHptYW5uLXRvcnAuaW5mbyIsInBob25lIjoiMS04NzYtODM4LTQwMjIgeDk2NDc2IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTMgMTI6MDA6MDIgVVRDIiwidXBkYXRlZF9hdCI6IjIwMjMtMDQtMTMgMTI6MDA6MDIgVVRDIiwicGFzc3dvcmQiOiJ5a1FHZ1JhQ3ZHIn0.dhCtrFj05s2TVqsOjRNaJWVNiUT_cfoQyqugSnbgaZ8"
+                  status:
+                    type: string
+                    example: "SUCCESS"
+                  message:
+                    type: string
+                    example: "User logged in"
+        "401":
+          description: Unauthorized
+        "400":
+          description: Bad Request
