@@ -15,7 +15,7 @@ paths:
           in: header
           description: Token containing email and password of the user
           required: true
-          example: "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IlRvcnkgQ3JlbWluIEpyLiIsImVtYWlsIjoiYmVsdmFAa2VydHptYW5uLXRvcnAuaW5mbyIsInBob25lIjoiMS04NzYtODM4LTQwMjIgeDk2NDc2IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTMgMTI6MDA6MDIgVVRDIiwidXBkYXRlZF9hdCI6IjIwMjMtMDQtMTMgMTI6MDA6MDIgVVRDIiwicGFzc3dvcmQiOiJ5a1FHZ1JhQ3ZHIn0.dhCtrFj05s2TVqsOjRNaJWVNiUT_cfoQyqugSnbgaZ8"
+          example: "token"
         - name: Content-Type
           in: header
           description: Type of the content sent in the request
@@ -41,7 +41,7 @@ paths:
                 properties:
                   token:
                     type: string
-                    example: "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IlRvcnkgQ3JlbWluIEpyLiIsImVtYWlsIjoiYmVsdmFAa2VydHptYW5uLXRvcnAuaW5mbyIsInBob25lIjoiMS04NzYtODM4LTQwMjIgeDk2NDc2IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTMgMTI6MDA6MDIgVVRDIiwidXBkYXRlZF9hdCI6IjIwMjMtMDQtMTMgMTI6MDA6MDIgVVRDIiwicGFzc3dvcmQiOiJ5a1FHZ1JhQ3ZHIn0.dhCtrFj05s2TVqsOjRNaJWVNiUT_cfoQyqugSnbgaZ8"
+                    example: "token"
                   status:
                     type: string
                     example: "SUCCESS"
