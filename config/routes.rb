@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :foodbanks, only: [:index, :create]
       resources :donations, only: [:index, :create]
       resources :volunteers, only: [:create]
-      resources :users, only: [:create]
+      resources :users, only: [:index, :create, :show]
       resources :photos, only: [:create]
       resources :feedbacks, only: [:create]
       resources :auth, only: [:create]
