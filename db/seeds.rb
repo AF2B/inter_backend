@@ -16,6 +16,7 @@ end
     name: Faker::Name.name,
     email: Faker::Internet.email,
     phone: Faker::PhoneNumber.cell_phone,
+    address: Faker::Address.street_address,
     password: Faker::Internet.password,
     is_donors: Faker::Boolean.boolean
   )
