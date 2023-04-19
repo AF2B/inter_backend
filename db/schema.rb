@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_14_220806) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_18_194456) do
   create_table "donations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "quantity"
     t.date "date"
@@ -69,6 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_14_220806) do
     t.datetime "updated_at", null: false
     t.string "password"
     t.boolean "is_donors"
+    t.string "address"
   end
 
   create_table "volunteers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
