@@ -13,6 +13,7 @@ services:
       - "3306:3306"
     volumes:
       - ./data/db:/var/lib/mysql
+    command: bash -c "chmod -R 755 /var/lib/mysql && docker-entrypoint.sh mysqld"
 
   web:
     build: .
@@ -26,4 +27,3 @@ services:
       - "3000:3000"
     depends_on:
       - db
-
