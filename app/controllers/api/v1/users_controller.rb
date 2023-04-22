@@ -4,7 +4,7 @@ class Api::V1::UsersController < ApplicationController
 
     return render json: { message: 'No users found!' }, status: :not_found if users.empty?
 
-    render json: user_json_structure(users)
+    render json: { data: user_json_structure(users) }, status: :ok
   end
 
   def create
@@ -29,12 +29,12 @@ class Api::V1::UsersController < ApplicationController
     end
 
     user = User.find(id)
-    render json: { data: user_json_uniq_user_structure(user) }
+    render json: { data: user_json_uniq_user_structure(user) }, status: :ok
   end
 
   private
   def user_json_structure(data)
-    data.map do |item|
+    data.each do |item|
       {
         data: {
           id: item.id,
