@@ -21,4 +21,5 @@ production:
   database: inter_backend_production
   username: root
   password: 123456
+  host: db
   port: 3306
