@@ -5,9 +5,9 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_DATABASE: db_name
-      MYSQL_USER: db_user
-      MYSQL_PASSWORD: db_password
+      MYSQL_DATABASE: inter_backend_production
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123456
       MYSQL_ROOT_PASSWORD: root_password
     ports:
       - "3306:3306"
