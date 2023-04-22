@@ -17,4 +17,6 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
   gem 'rswag'
+  gem 'json_matchers'
+  gem 'rubocop', require: false
 end
