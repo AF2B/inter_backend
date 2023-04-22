@@ -6,6 +6,8 @@ Rails.application.configure do
   # Production configuration for Railway
   config.hosts << "interbackend-production.up.railway.app"
 
+  config.hosts.clear
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
