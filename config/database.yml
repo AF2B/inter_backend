@@ -19,6 +19,6 @@ test:
 production:
   <<: *default
   database: inter_backend_production
-  username: db_user
-  password: db_password
+  username: root
+  password: 123456
   port: 3306
