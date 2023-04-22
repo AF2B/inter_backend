@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: inter_backend_production
-      MYSQL_USER: ''
+      MYSQL_USER: root
       MYSQL_PASSWORD: 123456
       MYSQL_ROOT_PASSWORD: 123456
     ports:
