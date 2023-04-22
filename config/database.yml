@@ -19,5 +19,6 @@ test:
 production:
   <<: *default
   database: inter_backend_production
-  username: inter_backend
-  password: <%= ENV["INTER_BACKEND_DATABASE_PASSWORD"] %>
+  username: root
+  password: 123456
+  port: 3306
