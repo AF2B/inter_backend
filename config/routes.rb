@@ -3,15 +3,12 @@ Rails.application.routes.draw do
   mount Rswag::Api::Engine => '/api-docs'
   namespace :api do
     namespace :v1 do
-      resources :donors, only: [:index, :create]
-      resources :organizations, only: [:index, :create]
-      resources :foodbanks, only: [:index, :create]
-      resources :donations, only: [:index, :create]
-      resources :volunteers, only: [:create]
+      resources :ongs, only: [:index, :create]
       resources :users, only: [:index, :create, :show]
-      resources :photos, only: [:create]
-      resources :feedbacks, only: [:create]
       resources :auth, only: [:create]
     end
   end
+
+  post '/api/v1/outofstock', to: 'api/v1/ongs#outofstock'
+  get '/api/v1/list-outofstock', to: 'api/v1/ongs#list_out_of_stock'
 end
