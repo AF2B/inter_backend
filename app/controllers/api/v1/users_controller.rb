@@ -4,7 +4,7 @@ class Api::V1::UsersController < ApplicationController
 
     return render json: { message: 'No users found!' }, status: :not_found if users.empty?
 
-    render json: { data: user_json_structure(users) }, status: :ok
+    render json: { data: users }, status: :ok
   end
 
   def create
