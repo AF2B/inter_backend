@@ -17,8 +17,4 @@ test:
 
 production:
   <<: *default
-  database: inter_backend_production
-  username: root
-  password: 123456
-  host: db
-  port: 3306
+  url: mysql://root:Ep8xD9rqYEs8Hhm2eM81@containers-us-west-138.railway.app:6506/railway
