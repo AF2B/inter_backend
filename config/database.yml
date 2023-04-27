@@ -3,9 +3,9 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: Ep8xD9rqYEs8Hhm2eM81
-  host: containers-us-west-138.railway.app
-  port: 6506
+  password: 123456
+  host: localhost
+  port: 3306
 
 development:
   <<: *default
