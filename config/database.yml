@@ -17,4 +17,8 @@ test:
 
 production:
   <<: *default
-  url: mysql://root:Ep8xD9rqYEs8Hhm2eM81@containers-us-west-138.railway.app:6506/railway
+  database: railway
+  username: root
+  password: Ep8xD9rqYEs8Hhm2eM81
+  host: containers-us-west-138.railway.app
+  port: 6506
