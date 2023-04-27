@@ -21,4 +21,4 @@ production:
   username: root
   password: Ep8xD9rqYEs8Hhm2eM81
   host: containers-us-west-138.railway.app
-  port: 6506
+  port: 3306
